@@ -3,7 +3,35 @@
 
     <url>
         <loc>https://37hwfe.github.io/tags/markdown/</loc>
-        <lastmod>2017-12-29T03:47:38.000Z</lastmod>
+        <lastmod>2018-01-05T02:43:30.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://37hwfe.github.io/tags/gulp/</loc>
+        <lastmod>2018-01-08T02:28:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://37hwfe.github.io/tags/base64/</loc>
+        <lastmod>2018-01-08T02:28:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://37hwfe.github.io/tags/image/</loc>
+        <lastmod>2018-01-08T02:28:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://37hwfe.github.io/tags/node-js/</loc>
+        <lastmod>2018-01-08T02:28:35.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[[Gulp插件开发]图片智能转换Base64格式]]></title>
+    <url>%2F2018%2F01%2F08%2FGulp%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91-Base64%E6%A0%BC%E5%BC%8F%E5%9B%BE%E7%89%87%E6%99%BA%E8%83%BD%E8%BD%AC%E6%8D%A2%E6%8F%92%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[前言我们为什么要使用Base64格式图片？Base64是网上常见的用于传输8bit字节码的编码方式之一，通俗讲就是一种基于64种可打印字符来表示二进制数据的方法。使用Base64字符替换传统的URL图片链接，其中一个便是起到加密作用。一串无规则的字符，使得我们的文件路径信息得到较好的隐藏。其次是减少一次http的请求，加快页面渲染速度，起到优化性能的作用。BTW，凡是都具有两面性，使用base64转换的图片，是一串较长的编码字符，这在一定程度上会加大文件体积。因此，我们一般只针对体积较小的图片做base64的转化，该插件则默认将3kb内的图片转化为base64格式。插件功能Func One: 遍历模板文件（HTML/TPL）中的img标签图片，智能地对其做Base64的处理。处理后的效果如图：图2-1：gulp-imgs2base64插件处理html效果图Func Two: 遍历样式表文件（CSS）中的背景图片，智能地对其做Base64的处理。处理后的效果如图：图2-2：gulp-img2base64插件处理CSS效果图UsageSTEP 1安装插件：1npm install gulp-img-base64STEP 2gulpfile.js中引用文件：123456789101112// 引入base64插件const base64Img = require('./gulp-img-base64');// 注册gulp任务gulp.task('default', () =&gt; &#123; gulp.src('./html/*.css') .pipe(base64Img(&#123; size: 3000, baseUrl: __dirname + '/src/' &#125;)) .pipe(gulp.dest('build'));&#125;)API说明：size: [可选]图片智能转换位base64格式的边界值，一般为3000，单位KbaseUrl: [必须]图片源文件所在根目录如何开发Gulp-img-base64插件原理插件工作流图如下：图4-1：gulp-imgs2base64插件流程图gulp插件开发gulp 插件总是返回一个_object mode_形式的 stream 来做这些事情：接收 vinyl File 对象输出 vinyl File 对象这通常被叫做 transform streams (有时候也叫做 through streams)。transform streams 是可读又可写的，它会对传给它的对象做一些转换的操作。而在我们实际的插件开发中，我们会使用一个through2的插件，这是一个对 node 的 transform streams 简单封装的插件，我们在引用这个插件之后，直接在API through.obj中操作gulp文件流即可，简单清晰，如下代码：1234567891011121314151617181920module.exports = function(options) &#123; // 创建一个让每个文件通过的 stream 通道 return through.obj(function(file, enc, done) &#123; if (file.isNull()) &#123; done(null, file); // 返回空文件 &#125; if (file.isStream()) &#123; this.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported!')); return done(); &#125; if (file.isBuffer()) &#123; // 操作buffer文件流 &#125; // 确保文件进去下一个插件 done(null, file, enc); &#125;);&#125;源码附件gulp-imgs2base64]]></content>
+      <categories>
+        <category>开发工作流</category>
+      </categories>
+      <tags>
+        <tag>gulp</tag>
+        <tag>base64</tag>
+        <tag>image</tag>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[37海外前端Blog规范]]></title>
     <url>%2F2017%2F12%2F21%2FBlog-Test%2F</url>
     <content type="text"><![CDATA[如何归属文章文章的分类一般有两个维度：分类和标签。一般而言，分类项由博客委员会成员确立，各成员发表的博客都应该归类于此。目前包含的分类有：前端开发NodeJs开发工作流开发规范读书笔记团队生活如需新增分类项，需博客委员会审核通过。标签则是对当前博文所包含属性的一种标记，如JavaScript、https等标签，由博主根据博文情况自行标记。如何使用标题《37海外前端Blog规范》（以下简称为《规范》）中要求，每一篇博文中最多不超过两级标题，两级标题以下的内容，使用加粗的方式进行强调。一级标题的使用一级标题作为博文中最高级别的标题，由4个“#”符号生成。二级标题的使用二级标题作为博文中的最低级别的标题，由5个“#”符号生成。如何使用强调和突出强调和突出主要表现在文字的正斜体，文字颜色和粗细三方面。《规范》规定，博文中文字部分的强调突出限定于以下三种方式：使用2个“*”或“_”符号加粗使用红色（color=red）使用1个“_”符号倾斜说明：在博文的实际书写过程，可以将以上三种方式任意结合，达成不同的强调效果。如何使用代码JavaScript:1var name = "wilton"; // 这是javascript的代码，支持语法高亮的哦HTML:12&lt;!-- html代码也可以语法高亮的哦 --&gt;&lt;div class="box" id="J_box"&gt;这是测试的html标签&lt;/div&gt;CSS:12345/* css代码也可以高亮的哦 */.box&#123; display: -webkit-flex; display: flex;&#125;如何使用图片图片的使用包含两个像素：图像和图像说明。《规范》要求图像和图像文字说明均居中显示，文字字号使用3字号，色号使用“#777”，说明格式为：图[一级标题所在编号]-[该级标题下图片编号]:[具体说明]。如 图5-1:念慈小姐姐哦图5-1：念慈小姐姐哦博文发表流程团队成员在博文发表过程需要经过一下流程：博主新建博文开发分支博主依据相关规范书写博文并做本地调试提交博客委员会审核审核通过则执行下一步，否则返回第二步合并博文源码并发布博文具体流程图如下：图6-1：博文发表流程图附录：Markdown语法参考]]></content>
