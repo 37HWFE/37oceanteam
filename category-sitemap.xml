@@ -8,14 +8,21 @@
 
     <url>
         <loc>https://37hwfe.github.io/categories/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</loc>
-        <lastmod>2018-01-05T02:43:30.000Z</lastmod>
+        <lastmod>2018-01-22T04:06:14.465Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://37hwfe.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
+        <lastmod>2018-02-07T02:46:46.236Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://37hwfe.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%B5%81/</loc>
-        <lastmod>2018-01-08T02:28:35.000Z</lastmod>
+        <lastmod>2018-03-08T06:33:00.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
