@@ -30,13 +30,6 @@
     </url>
 
     <url>
-        <loc>https://37hwfe.github.io/tags/CSS/</loc>
-        <lastmod>2018-05-30T03:48:51.385Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://37hwfe.github.io/tags/JavaScript/</loc>
         <lastmod>2018-05-30T03:48:51.386Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -53,6 +46,27 @@
     <url>
         <loc>https://37hwfe.github.io/tags/%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/</loc>
         <lastmod>2018-05-30T03:48:51.387Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://37hwfe.github.io/tags/CSS/</loc>
+        <lastmod>2018-05-31T01:53:57.784Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://37hwfe.github.io/tags/Background/</loc>
+        <lastmod>2018-05-31T01:53:57.784Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://37hwfe.github.io/tags/HTML/</loc>
+        <lastmod>2018-05-31T01:53:57.784Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
